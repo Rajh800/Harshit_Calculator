@@ -90,7 +90,7 @@ public class Login extends JFrame {
         Login login = new Login();
         login.setVisible(true);
     });
-}
+
 
     }
 }

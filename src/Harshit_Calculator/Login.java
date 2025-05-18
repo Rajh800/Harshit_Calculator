@@ -73,7 +73,7 @@ public class Login extends JFrame {
             JOptionPane.showMessageDialog(this, "Please fill out password");
         } else if (username.equals("Harshit") && password.equals("12345678")) {
             JOptionPane.showMessageDialog(this, "Login Successful");
-            new Calculator().setVisible(true); // Opens placeholder Calculator
+             new Harshit_Calculator().setVisible(true); // Opens placeholder Calculator
             this.dispose();
         } else {
             JOptionPane.showMessageDialog(this, "Wrong username or password !!", "Error", JOptionPane.ERROR_MESSAGE);

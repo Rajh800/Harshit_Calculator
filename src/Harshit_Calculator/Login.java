@@ -80,7 +80,18 @@ public class Login extends JFrame {
     }
 
     public static void main(String[] args) {
-        new Login().setVisible(true);
+    try {
+        UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+    SwingUtilities.invokeLater(() -> {
+        Login login = new Login();
+        login.setVisible(true);
+    });
+}
+
     }
 }
 

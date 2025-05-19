@@ -52,7 +52,7 @@ public class Login extends JFrame {
     // Password Field
     jtPass = new JPasswordField();
     jtPass.setBounds(190, 190, 230, 25);
-    jtPass.setBackground(Color.Yellow);
+    jtPass.setBackground(Color.YELLOW);
     add(jtPass);
 
     // Show Password Checkbox

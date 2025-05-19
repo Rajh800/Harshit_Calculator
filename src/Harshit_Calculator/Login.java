@@ -1,5 +1,6 @@
 package Harshit_Calculator;
 import Harshit_Calculator.Harshit_Calculator;
+import java.awt.Color;
 
 import javax.swing.*;
 
@@ -11,68 +12,75 @@ public class Login extends JFrame {
 
     public Login() {
         initComponents();
-    }
+    } 
 
-    private void initComponents() {
-        setTitle("Harshit Calculator Login");
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLayout(null); // Manual layout
-        setSize(500, 400);
-        setLocationRelativeTo(null);
+  private void initComponents() {
+    setTitle("Harshit Calculator Login");
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setLayout(null); 
+    setSize(500, 400);
+    setLocationRelativeTo(null);
 
-        getContentPane().setBackground(new java.awt.Color(220, 230, 241));
-        jtUser.setBackground(Color.WHITE);
-        jtLogin.setBackground(new Color(100, 149, 237)); // Cornflower Blue
-        jtLogin.setForeground(Color.WHITE); // Text color
-        jLabel1.setBackground(Color.RED);
+    // Set background color
+    getContentPane().setBackground(new Color(220, 230, 241));
 
+    // Title Label
+    JLabel jLabel1 = new JLabel("HARSHIT CALCULATOR LOGIN PAGE");
+    jLabel1.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 18));
+    jLabel1.setBounds(60, 20, 400, 30);
+    jLabel1.setOpaque(true); // Needed to show background color
+    jLabel1.setBackground(Color.RED); // Set background
+    jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
+    add(jLabel1);
 
+    // User Label
+    JLabel jLabel3 = new JLabel("USER NAME");
+    jLabel3.setBounds(50, 130, 80, 30);
+    add(jLabel3);
 
+    // Username Field
+    jtUser = new JTextField();
+    jtUser.setBounds(190, 130, 230, 25);
+    jtUser.setBackground(Color.WHITE);
+    add(jtUser);
 
-        
+    // Password Label
+    JLabel jLabel2 = new JLabel("PASSWORD");
+    jLabel2.setBounds(50, 190, 80, 30);
+    add(jLabel2);
 
-        JLabel jLabel1 = new JLabel("HARSHIT CALCULATOR LOGIN PAGE");
-        jLabel1.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 18));
-        jLabel1.setBounds(60, 20, 400, 30);
-        add(jLabel1);
+    // Password Field
+    jtPass = new JPasswordField();
+    jtPass.setBounds(190, 190, 230, 25);
+    add(jtPass);
 
-        JLabel jLabel3 = new JLabel("USER NAME");
-        jLabel3.setBounds(50, 130, 80, 30);
-        add(jLabel3);
+    // Show Password Checkbox
+    jtShow = new JCheckBox("Show Password");
+    jtShow.setBounds(310, 230, 130, 25);
+    jtShow.addActionListener(e -> {
+        if (jtShow.isSelected()) {
+            jtPass.setEchoChar((char) 0);
+        } else {
+            jtPass.setEchoChar('*');
+        }
+    });
+    add(jtShow);
 
-        jtUser = new JTextField();
-        jtUser.setBounds(190, 130, 230, 25);
-        add(jtUser);
+    // Login Button
+    jtLogin = new JButton("Login");
+    jtLogin.setBounds(340, 270, 80, 30);
+    jtLogin.setBackground(new Color(100, 149, 237)); // Cornflower Blue
+    jtLogin.setForeground(Color.WHITE);
+    jtLogin.addActionListener(e -> onLogin());
+    add(jtLogin);
 
-        JLabel jLabel2 = new JLabel("PASSWORD");
-        jLabel2.setBounds(50, 190, 80, 30);
-        add(jLabel2);
+    // Exit Button
+    jtExit = new JButton("EXIT");
+    jtExit.setBounds(240, 270, 80, 30);
+    jtExit.addActionListener(e -> System.exit(0));
+    add(jtExit);
+}
 
-        jtPass = new JPasswordField();
-        jtPass.setBounds(190, 190, 230, 25);
-        add(jtPass);
-
-        jtShow = new JCheckBox("Show Password");
-        jtShow.setBounds(310, 230, 130, 25);
-        jtShow.addActionListener(e -> {
-            if (jtShow.isSelected()) {
-                jtPass.setEchoChar((char) 0);
-            } else {
-                jtPass.setEchoChar('*');
-            }
-        });
-        add(jtShow);
-
-        jtLogin = new JButton("Login");
-        jtLogin.setBounds(340, 270, 80, 30);
-        jtLogin.addActionListener(e -> onLogin());
-        add(jtLogin);
-
-        jtExit = new JButton("EXIT");
-        jtExit.setBounds(240, 270, 80, 30);
-        jtExit.addActionListener(e -> System.exit(0));
-        add(jtExit);
-    }
 
     private void onLogin() {
         String username = jtUser.getText();

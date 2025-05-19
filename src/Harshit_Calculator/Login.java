@@ -20,9 +20,20 @@ public class Login extends JFrame {
         setSize(500, 400);
         setLocationRelativeTo(null);
 
+        getContentPane().setBackground(new java.awt.Color(220, 230, 241));
+        jtUser.setBackground(Color.WHITE);
+        jtLogin.setBackground(new Color(100, 149, 237)); // Cornflower Blue
+        jtLogin.setForeground(Color.WHITE); // Text color
+        jLabel1.setBackground(Color.RED);
+
+
+
+
+        
+
         JLabel jLabel1 = new JLabel("HARSHIT CALCULATOR LOGIN PAGE");
         jLabel1.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 18));
-        jLabel1.setBounds(50, 20, 400, 30);
+        jLabel1.setBounds(60, 20, 400, 30);
         add(jLabel1);
 
         JLabel jLabel3 = new JLabel("USER NAME");

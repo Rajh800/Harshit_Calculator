@@ -244,7 +244,7 @@ public class Harshit_Calculator extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setForeground(Colour BLACK);
+        jLabel1.setForeground(Colour.BLACK);
         jLabel1.setText("CASIO");
 
         jLabel2.setBackground(new java.awt.Color(204, 255, 51));

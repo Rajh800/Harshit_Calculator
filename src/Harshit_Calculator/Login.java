@@ -42,6 +42,7 @@ public class Login extends JFrame {
     // Username Field
     jtUser = new JTextField();
     jtUser.setBounds(190, 130, 230, 25);
+    jtUser.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 18));
     jtUser.setBackground(Color.YELLOW);
     add(jtUser);
 
@@ -54,6 +55,7 @@ public class Login extends JFrame {
     // Password Field
     jtPass = new JPasswordField();
     jtPass.setBounds(190, 190, 230, 25);
+    jtPass.setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 18));
     jtPass.setBackground(Color.YELLOW);
     add(jtPass);
 

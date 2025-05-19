@@ -22,7 +22,7 @@ public class Login extends JFrame {
     setLocationRelativeTo(null);
 
     // Set background color
-    getContentPane().setBackground(new Color(220, 230, 241));
+    getContentPane().setBackground(Color.BLUE);
 
     // Title Label
     JLabel jLabel1 = new JLabel("HARSHIT CALCULATOR LOGIN PAGE");
@@ -41,7 +41,7 @@ public class Login extends JFrame {
     // Username Field
     jtUser = new JTextField();
     jtUser.setBounds(190, 130, 230, 25);
-    jtUser.setBackground(Color.WHITE);
+    jtUser.setBackground(Color.YELLOW);
     add(jtUser);
 
     // Password Label
@@ -52,6 +52,7 @@ public class Login extends JFrame {
     // Password Field
     jtPass = new JPasswordField();
     jtPass.setBounds(190, 190, 230, 25);
+    jtPass.setBackground(Color.Yellow);
     add(jtPass);
 
     // Show Password Checkbox
@@ -69,7 +70,7 @@ public class Login extends JFrame {
     // Login Button
     jtLogin = new JButton("Login");
     jtLogin.setBounds(340, 270, 80, 30);
-    jtLogin.setBackground(new Color(100, 149, 237)); // Cornflower Blue
+    jtLogin.setBackground(Color.GREEN); // GREEN
     jtLogin.setForeground(Color.WHITE);
     jtLogin.addActionListener(e -> onLogin());
     add(jtLogin);
@@ -77,6 +78,7 @@ public class Login extends JFrame {
     // Exit Button
     jtExit = new JButton("EXIT");
     jtExit.setBounds(240, 270, 80, 30);
+    jtExit.setBackground(Color.RED); //RED
     jtExit.addActionListener(e -> System.exit(0));
     add(jtExit);
 }

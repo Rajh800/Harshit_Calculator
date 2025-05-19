@@ -1,5 +1,5 @@
 package Harshit_Calculator;
-
+import java.awt.*;
 /**
  *
  * @author rajh8
@@ -48,10 +48,12 @@ public class Harshit_Calculator extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(128, 0, 128));
+        setBackground(new java.awt.Color(153, 204, 128));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setForeground(new java.awt.Color(0, 0, 255));
         setResizable(false);
+
+       getContentPane().setBackground(new Color(128, 0, 128)); 
 
         jtxtResult.setBackground(new java.awt.Color(255, 172, 72));
         jtxtResult.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N

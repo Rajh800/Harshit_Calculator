@@ -56,7 +56,7 @@ public class Harshit_Calculator extends javax.swing.JFrame {
        getContentPane().setBackground(new Color(128, 0, 128)); 
 
         jtxtResult.setBackground(new java.awt.Color(255, 172, 72));
-        jtxtResult.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+      jtxtResult.setFont(new java.awt.Font("Monospaced", java.awt.Font.BOLD, 24));
         jtxtResult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtResultActionPerformed(evt);

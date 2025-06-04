@@ -2,7 +2,7 @@ package Harshit_Calculator;
 import java.awt.*;
 /**
  *
- * @author rajh8
+ * @author Harshit Raj
  */
 public class Harshit_Calculator extends javax.swing.JFrame {
     

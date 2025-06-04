@@ -6,10 +6,7 @@ import java.awt.*;
  */
 public class Harshit_Calculator extends javax.swing.JFrame {
     
-
-    /**
-     * Creates new form Harshit_Calculator
-     */
+ // Variables to store the operands and result of calculations
     double NumberEnter1;
     double  NumberEnter2;
     double Result;
@@ -18,17 +15,22 @@ public class Harshit_Calculator extends javax.swing.JFrame {
     public Harshit_Calculator() {
         initComponents();
     }
+    /**
+     * This method initializes all GUI components (buttons, labels, text field)
+     * and sets their layout, colors, fonts, and event handlers.
+     */
 
     @SuppressWarnings("unchecked")
    
     private void initComponents() {
 
-        jtxtResult = new javax.swing.JTextField();
-        jbtnCE = new javax.swing.JButton();
-        jbtnBKP = new javax.swing.JButton();
-        jbtnSum = new javax.swing.JButton();
-        jbtnC = new javax.swing.JButton();
-        jbtnDigit8 = new javax.swing.JButton();
+       //Assigning TextField,Button and Label 
+        jtxtResult = new javax.swing.JTextField(); // Display for input/output
+        jbtnCE = new javax.swing.JButton();         // Clear entry
+        jbtnBKP = new javax.swing.JButton();        // Backspace
+        jbtnSum = new javax.swing.JButton();        // Addition
+        jbtnC = new javax.swing.JButton();          // Clear all
+        jbtnDigit8 = new javax.swing.JButton();     // Digits 0–9
         jbtnDigit7 = new javax.swing.JButton();
         jbtnDigit9 = new javax.swing.JButton();
         jbtnDigit5 = new javax.swing.JButton();
@@ -38,23 +40,24 @@ public class Harshit_Calculator extends javax.swing.JFrame {
         jbtnDigit1 = new javax.swing.JButton();
         jbtnDigit3 = new javax.swing.JButton();
         jbtnDigit0 = new javax.swing.JButton();
-        jbtnDot = new javax.swing.JButton();
-        jbtnEqual = new javax.swing.JButton();
-        jbtnPM = new javax.swing.JButton();
-        jbtnSub = new javax.swing.JButton();
-        jbtnMul = new javax.swing.JButton();
-        jbtnDiv = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jbtnDot = new javax.swing.JButton();        // Decimal point
+        jbtnEqual = new javax.swing.JButton();       // Equal button
+        jbtnPM = new javax.swing.JButton();           // Positive/negative toggle
+        jbtnSub = new javax.swing.JButton();          // Subtraction
+        jbtnMul = new javax.swing.JButton();           // Multiplication
+        jbtnDiv = new javax.swing.JButton();             // Division
+        jLabel1 = new javax.swing.JLabel();            // Title label
+        jLabel2 = new javax.swing.JLabel();             //Name Label
 
+        // Set up JFrame properties
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 204, 128));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setForeground(new java.awt.Color(0, 0, 255));
         setResizable(false);
+       getContentPane().setBackground(new Color(128, 0, 128));   //Background colour
 
-       getContentPane().setBackground(new Color(128, 0, 128)); 
-
+         // Setup jtxtResult
         jtxtResult.setBackground(new java.awt.Color(255, 172, 72));
       jtxtResult.setFont(new java.awt.Font("Monospaced", java.awt.Font.BOLD, 24));
         jtxtResult.addActionListener(new java.awt.event.ActionListener() {
@@ -63,6 +66,7 @@ public class Harshit_Calculator extends javax.swing.JFrame {
             }
         });
 
+         // Set button text, font, background and actions
         jbtnCE.setBackground(new java.awt.Color(0, 255, 255));
         jbtnCE.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jbtnCE.setText("CE");
@@ -81,6 +85,7 @@ public class Harshit_Calculator extends javax.swing.JFrame {
             }
         });
 
+        
         jbtnSum.setBackground(new java.awt.Color(102, 255, 0));
         jbtnSum.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jbtnSum.setText("+");
@@ -243,6 +248,7 @@ public class Harshit_Calculator extends javax.swing.JFrame {
             }
         });
 
+         // Display "CASIO" and author signature
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(Color.BLACK);
         jLabel1.setText("CASIO");
@@ -356,23 +362,26 @@ public class Harshit_Calculator extends javax.swing.JFrame {
      String Nums=jtxtResult.getText() + q;
      jtxtResult.setText(Nums);
      }
-    private void jtxtResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtResultActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtxtResultActionPerformed
+    private void jtxtResultActionPerformed(java.awt.event.ActionEvent evt) {
+       
+    }
 
-    private void jbtnSumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSumActionPerformed
+     // Button Event Handlers
+    private void jbtnSumActionPerformed(java.awt.event.ActionEvent evt) {
     NumberEnter1 =Double.parseDouble(jtxtResult.getText());
      jtxtResult.setText("");
      op="+";
-    }//GEN-LAST:event_jbtnSumActionPerformed
+        // Set operation to addition
+    }
 
-    private void jbtnDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDivActionPerformed
+    private void jbtnDivActionPerformed(java.awt.event.ActionEvent evt) {
      NumberEnter1 =Double.parseDouble(jtxtResult.getText());
      jtxtResult.setText("");
      op="/";
-    }//GEN-LAST:event_jbtnDivActionPerformed
+        // Set operation to division
+    }
 
-    private void jbtnBKPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnBKPActionPerformed
+    private void jbtnBKPActionPerformed(java.awt.event.ActionEvent evt) {
       
         String backSp =null;
         if(jtxtResult.getText().length() >0){
@@ -382,71 +391,76 @@ public class Harshit_Calculator extends javax.swing.JFrame {
             backSp =ab.toString();
             jtxtResult.setText( backSp);
         }
-    }//GEN-LAST:event_jbtnBKPActionPerformed
-
-    private void jbtnDigit7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDigit7ActionPerformed
+    }
+    
+  // Each digit button calls EnterNumbers with the respective digit
+    private void jbtnDigit7ActionPerformed(java.awt.event.ActionEvent evt) {
        EnterNumbers("7");
-    }//GEN-LAST:event_jbtnDigit7ActionPerformed
+    }
 
-    private void jbtnDigit8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDigit8ActionPerformed
+    private void jbtnDigit8ActionPerformed(java.awt.event.ActionEvent evt) {
           EnterNumbers("8");
-    }//GEN-LAST:event_jbtnDigit8ActionPerformed
+    }
 
-    private void jbtnDigit9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDigit9ActionPerformed
+    private void jbtnDigit9ActionPerformed(java.awt.event.ActionEvent evt) {
       EnterNumbers("9");
-    }//GEN-LAST:event_jbtnDigit9ActionPerformed
+    }
 
-    private void jbtnDigit4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDigit4ActionPerformed
+    private void jbtnDigit4ActionPerformed(java.awt.event.ActionEvent evt) {
         EnterNumbers("4");
-    }//GEN-LAST:event_jbtnDigit4ActionPerformed
+    }
 
-    private void jbtnDigit5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDigit5ActionPerformed
+    private void jbtnDigit5ActionPerformed(java.awt.event.ActionEvent evt) {
           EnterNumbers("5");
-    }//GEN-LAST:event_jbtnDigit5ActionPerformed
+    }
 
-    private void jbtnDigit6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDigit6ActionPerformed
+    private void jbtnDigit6ActionPerformed(java.awt.event.ActionEvent evt) {
           EnterNumbers("6");
-    }//GEN-LAST:event_jbtnDigit6ActionPerformed
+    }
 
-    private void jbtnDigit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDigit1ActionPerformed
+    private void jbtnDigit1ActionPerformed(java.awt.event.ActionEvent evt) {
        EnterNumbers("1");
-    }//GEN-LAST:event_jbtnDigit1ActionPerformed
+    }
 
-    private void jbtnDigit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDigit2ActionPerformed
+    private void jbtnDigit2ActionPerformed(java.awt.event.ActionEvent evt) {
        EnterNumbers("2");
-    }//GEN-LAST:event_jbtnDigit2ActionPerformed
+    }
 
-    private void jbtnDigit3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDigit3ActionPerformed
+    private void jbtnDigit3ActionPerformed(java.awt.event.ActionEvent evt) {
        EnterNumbers("3");
-    }//GEN-LAST:event_jbtnDigit3ActionPerformed
+    }
 
-    private void jbtnDigit0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDigit0ActionPerformed
+    private void jbtnDigit0ActionPerformed(java.awt.event.ActionEvent evt) {
     EnterNumbers("0");
-    }//GEN-LAST:event_jbtnDigit0ActionPerformed
+    }
 
-    private void jbtnDotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDotActionPerformed
+    private void jbtnDotActionPerformed(java.awt.event.ActionEvent evt) {
       if(! jtxtResult.getText().contains(".")) {
           jtxtResult.setText(jtxtResult.getText()+ jbtnDot.getText() );
       }
-    }//GEN-LAST:event_jbtnDotActionPerformed
+    }
 
-    private void jbtnMulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnMulActionPerformed
+    private void jbtnMulActionPerformed(java.awt.event.ActionEvent evt) {
        NumberEnter1 =Double.parseDouble(jtxtResult.getText());
      jtxtResult.setText("");
      op="*";
-    }//GEN-LAST:event_jbtnMulActionPerformed
+        // Multiplication
+    }
 
-    private void jbtnSubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSubActionPerformed
+    private void jbtnSubActionPerformed(java.awt.event.ActionEvent evt) {
       NumberEnter1 =Double.parseDouble(jtxtResult.getText());
      jtxtResult.setText("");
      op="-";
-    }//GEN-LAST:event_jbtnSubActionPerformed
+         // Subtraction
+    }
 
-    private void jbtnCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCActionPerformed
+    private void jbtnCActionPerformed(java.awt.event.ActionEvent evt) {
+        // Clear display only
         jtxtResult.setText("");
-    }//GEN-LAST:event_jbtnCActionPerformed
+    }
 
-    private void jbtnCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCEActionPerformed
+    private void jbtnCEActionPerformed(java.awt.event.ActionEvent evt) {
+            // Change sign
         jtxtResult.setText("");
         
         String Fn , Sn;
@@ -456,15 +470,16 @@ public class Harshit_Calculator extends javax.swing.JFrame {
     Fn="";
     Sn="";
     
-    }//GEN-LAST:event_jbtnCEActionPerformed
+    }
 
-    private void jbtnPMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPMActionPerformed
+    private void jbtnPMActionPerformed(java.awt.event.ActionEvent evt) {
    double nums=Double.parseDouble(String.valueOf(jtxtResult.getText()));
   nums =nums*(-1);
    jtxtResult.setText(String.valueOf( nums));
-    }//GEN-LAST:event_jbtnPMActionPerformed
+    }
 
-    private void jbtnEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnEqualActionPerformed
+    private void jbtnEqualActionPerformed(java.awt.event.ActionEvent evt) {
+          // Perform the selected operation
     NumberEnter2 =Double.parseDouble(jtxtResult.getText());
     if (op =="+"){
      Result =NumberEnter1 +NumberEnter2;
@@ -486,17 +501,11 @@ public class Harshit_Calculator extends javax.swing.JFrame {
     }
     
 
-    }//GEN-LAST:event_jbtnEqualActionPerformed
+    }
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+       
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -513,9 +522,9 @@ public class Harshit_Calculator extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Harshit_Calculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+     
 
-        /* Create and display the form */
+      
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Harshit_Calculator().setVisible(true);
@@ -523,7 +532,7 @@ public class Harshit_Calculator extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+ 
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton jbtnBKP;
@@ -547,5 +556,5 @@ public class Harshit_Calculator extends javax.swing.JFrame {
     private javax.swing.JButton jbtnSub;
     private javax.swing.JButton jbtnSum;
     private javax.swing.JTextField jtxtResult;
-    // End of variables declaration//GEN-END:variables
+  
 }
